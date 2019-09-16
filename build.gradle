@@ -17,8 +17,14 @@ buildscript {
 allprojects {
     repositories {
         google()
+        maven { url "https://jitpack.io" }
+        mavenLocal()
         jcenter()
-        
+
+        maven {
+            url "$rootDir/ReactDemo/node_modules/react-native/android"
+        }
+
     }
 }
 

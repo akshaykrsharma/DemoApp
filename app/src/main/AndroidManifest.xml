@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ideamound.demoapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="com.ideamound.demoapp.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        tools:replace="android:allowBackup"
+        tools:overrideLibrary="com.facebook.react"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
@@ -19,6 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.ideamound.demoapp.CustomReactActivity"></activity>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>
 
 </manifest>
